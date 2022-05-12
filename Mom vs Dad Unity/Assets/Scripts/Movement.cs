@@ -18,8 +18,8 @@ public class Movement : MonoBehaviour
     void Update()
     {
         X = Input.GetAxis("Horizontal");
-        move = new Vector3(X, 0, 0);
-        rigidbody.AddForce(move * speed * Time.deltaTime);
+        move = new Vector3(X, 0f, 0f);
+        rigidbody.velocity = move * speed * Time.deltaTime;
 
     }
 }
