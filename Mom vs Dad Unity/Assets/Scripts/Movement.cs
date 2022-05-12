@@ -5,7 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     float X;
-    Rigidbody rb;
+    public Rigidbody rb;
     Vector3 move;
     public float speed;
 
