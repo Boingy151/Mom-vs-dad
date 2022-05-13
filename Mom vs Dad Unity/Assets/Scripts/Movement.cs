@@ -17,6 +17,8 @@ public class Movement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        GameObject playerC = GameObject.Find("PointGeatherer");
+        PointScript refPScript = playerC.GetComponent<>
     }
 
     // Update is called once per frame
@@ -46,14 +48,10 @@ public class Movement : MonoBehaviour
         }
         move = new Vector3(X, 0f, 0f);
         rb.AddForce(move * speed * Time.deltaTime);
-        /*if (rb.velocity.x > 25)
-        {
-            rb.velocity = new Vector3(10, rb.velocity.y, rb.velocity.z);
-        }
-        else if (rb.velocity.x < -25)
-        {
-            rb.velocity = new Vector3(-10, rb.velocity.y, rb.velocity.z);
-        }
-        */
+    }
+
+    public void TouchedGrass()
+    {
+        numOfPoints ++;
     }
 }
