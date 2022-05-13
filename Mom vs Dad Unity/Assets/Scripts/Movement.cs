@@ -8,6 +8,7 @@ public class Movement : MonoBehaviour
     public Rigidbody rb;
     Vector3 move;
     public float speed;
+    Component refPScript;
 
     bool goingRight;
     bool goingLeft;
@@ -17,14 +18,11 @@ public class Movement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        GameObject playerC = GameObject.Find("PointGeatherer");
-        PointScript refPScript = playerC.GetComponent<>
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(rb.velocity);
         //Makes movement instantanious instead of waiting for
         //the axis to get from 0 to 1 with its slow increments
         if (Input.GetKey(KeyCode.D))
@@ -52,6 +50,8 @@ public class Movement : MonoBehaviour
 
     public void TouchedGrass()
     {
-        numOfPoints ++;
+        GameObject playerC = GameObject.Find("PointGeatherer");
+        PointScript refPScript = playerC.GetComponent<PointScript>();
+        refPScript.numOfPoints++;
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PointScript : MonoBehaviour
 {
-    int numOfPoints;
+    public int numOfPoints = 0;
     void Start()
     {
         
