@@ -47,7 +47,7 @@ public class Movement : MonoBehaviour
         move = new Vector3(X, 0f, 0f);
         rb.AddForce(move * speed * Time.deltaTime);
     }
-
+    //this gets called every time the player hits grass so the score goes up by 1
     public void TouchedGrass()
     {
         GameObject playerC = GameObject.Find("PointGeatherer");
