@@ -25,10 +25,10 @@ public class GrassScript : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
         //when the grass 
-        if(collision.gameObject.tag == "Grass")
+        if (other.gameObject.tag == "Grass")
         {
             GameObject playerB = GameObject.Find("Player");
             Movement movRefScrpt = playerB.GetComponent<Movement>();
