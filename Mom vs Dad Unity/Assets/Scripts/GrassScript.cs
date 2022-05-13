@@ -22,6 +22,17 @@ public class GrassScript : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        
+    }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        //when the grass 
+        if(collision.gameObject.tag == "Grass")
+        {
+            GameObject playerB = GameObject.Find("Player");
+            Movement movRefScrpt = playerB.GetComponent<Movement>();
+            movRefScrpt.TouchedGrass();
+        }
     }
 }
