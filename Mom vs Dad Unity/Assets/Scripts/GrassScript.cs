@@ -17,7 +17,7 @@ public class GrassScript : MonoBehaviour
     { 
         rb.velocity = new Vector3(0, 0, -1 * speed * Time.deltaTime);
 
-        //remove
+        //removes the grass
         if(transform.position.z < -1f)
         {
             Destroy(gameObject);
@@ -27,12 +27,16 @@ public class GrassScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //when the grass 
-        if (other.gameObject.tag == "Grass")
+        //detects grass touching the player
+        if (other.gameObject.tag == "Player")
         {
+            //grabs the player gameobject
             GameObject playerB = GameObject.Find("Player");
+            //gets the component from the player
             Movement movRefScrpt = playerB.GetComponent<Movement>();
             movRefScrpt.TouchedGrass();
+            //destroys the grass after collision
+            Destroy(gameObject);
         }
     }
 }
