@@ -318,7 +318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xRange: {x: -4, y: 4}
   zRange: {x: 10, y: 130}
-  SpawnDelay: 0
+  Grass: {fileID: 4364169976694977581, guid: 4f1271e1d106a374bb570c5fe998bb2f, type: 3}
 --- !u!1 &899446394
 GameObject:
   m_ObjectHideFlags: 0
