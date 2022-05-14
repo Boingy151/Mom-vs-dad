@@ -30,7 +30,7 @@ public class GrassSpawner : MonoBehaviour
     {
         xCord = Random.Range(xRange.x, xRange.y);
         zCord = Random.Range(zRange.x, zRange.y);
-        SpawnDelay = Random.Range(2, 3);
+        SpawnDelay = Random.Range(0.5f, 2f);
         Debug.Log(xCord);
         Debug.Log(zCord);
       

@@ -8,7 +8,8 @@ public class Movement : MonoBehaviour
     public Rigidbody rb;
     Vector3 move;
     public float speed;
-    Component refPScript;
+    GameObject playerC;
+    PointScript refPScript;
 
     bool goingRight;
     bool goingLeft;
@@ -50,8 +51,8 @@ public class Movement : MonoBehaviour
     //this gets called every time the player hits grass so the score goes up by 1
     public void TouchedGrass()
     {
-        GameObject playerC = GameObject.Find("PointGeatherer");
-        PointScript refPScript = playerC.GetComponent<PointScript>();
+        playerC = GameObject.Find("PointGeatherer");
+        refPScript = playerC.GetComponent<PointScript>();
         refPScript.numOfPoints++;
     }
 }
