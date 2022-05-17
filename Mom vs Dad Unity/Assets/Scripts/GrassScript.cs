@@ -7,15 +7,25 @@ public class GrassScript : MonoBehaviour
 
     Rigidbody rb;
     public float speed;
+    float currentSpeed;
+
+    
+
+    public float IncreaseLevel;
+    
 
     private void Start()
     {
+        
         rb = GetComponent<Rigidbody>();
+        
     }
     // Update is called once per frame
     void Update()
-    { 
-        rb.velocity = new Vector3(0, 0, -1 * speed * Time.deltaTime);
+    {
+        currentSpeed = (1 + (GrassSpawner.time*IncreaseLevel)) * speed;
+        Debug.Log(currentSpeed);
+        rb.velocity = new Vector3(0, 0, -1 * currentSpeed * Time.deltaTime);
 
         //removes the grass
         if(transform.position.z < -1f)

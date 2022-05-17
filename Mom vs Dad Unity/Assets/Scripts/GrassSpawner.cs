@@ -11,10 +11,13 @@ public class GrassSpawner : MonoBehaviour
     public Vector2 zRange;
     float SpawnDelay;
     public GameObject Grass;
+
+    public static float time;
     
     // Start is called before the first frame update
     void Start()
     {
+        
         SpawnDelay = 1;
         InvokeRepeating("SpawnGrass", SpawnDelay, SpawnDelay);
         
@@ -23,6 +26,7 @@ public class GrassSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        time = Time.time;
         
     }
 
@@ -31,8 +35,7 @@ public class GrassSpawner : MonoBehaviour
         xCord = Random.Range(xRange.x, xRange.y);
         zCord = Random.Range(zRange.x, zRange.y);
         SpawnDelay = Random.Range(0.5f, 2f);
-        Debug.Log(xCord);
-        Debug.Log(zCord);
+        
       
 
         Instantiate(Grass, new Vector3(xCord, 0.3f, zCord), new Quaternion(0, 0, 0, 0));

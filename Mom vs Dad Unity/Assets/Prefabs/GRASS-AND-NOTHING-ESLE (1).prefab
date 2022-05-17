@@ -163,6 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1500
+  IncreaseLevel: 0.005
 --- !u!1 &4723491597267212010
 GameObject:
   m_ObjectHideFlags: 0
