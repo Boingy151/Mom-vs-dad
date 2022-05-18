@@ -28,24 +28,8 @@ public class PointScript : MonoBehaviour
     void Update()
     {
         skybox.SetColor("_Tint", color);
-        /*if (numOfPoints > 0)
-        {
-            color = new Color(1-(0.009f*numOfPoints), 1, 0);
-            Debug.Log(color.r);
-        }
-        else if(numOfPoints < 45 && numOfPoints > 0 )
-        {
-            color = new Color(1, 1 - (0.009f * numOfPoints), 0);
-        }
-        else if (numOfPoints < 15 && numOfPoints < 0)
-        {
-            color = new Color(1, 1 - (0.009f * numOfPoints * 10), 0);
-        }
-        else if (numOfPoints > 15 && numOfPoints < 45)
-        {
-            color = new Color(1, 1 - (0.009f * numOfPoints * -10), 0);
-        }
-        */
+       
+       
         //checks if points are more or less
 
         if(numOfPoints > 45)
