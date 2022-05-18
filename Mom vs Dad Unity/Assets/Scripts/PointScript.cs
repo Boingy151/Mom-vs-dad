@@ -29,13 +29,13 @@ public class PointScript : MonoBehaviour
             color = new Color(1-(0.009f*numOfPoints), 1, 0);
             Debug.Log(color.r);
         }
-        else if(numOfPoints < 45 && numOfPoints >0 )
+        else if(numOfPoints < 45 && numOfPoints > 0 )
         {
             color = new Color(1, 1 - (0.009f * numOfPoints), 0);
         }
         else if (numOfPoints < 45 && numOfPoints < 0)
         {
-            color = new Color(1, 1 - (0.009f * numOfPoints * -1), 0);
+            color = new Color(1, 1 - (0.009f * numOfPoints * -11), 0);
         }
 
         if(numOfPoints > 99)
