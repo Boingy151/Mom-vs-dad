@@ -13,6 +13,8 @@ public class PointScript : MonoBehaviour
     public GameObject Win;
     public GameObject Lose;
     public GameObject reset;
+    bool OverForty = false;
+    
     void Start()
     {
 
@@ -44,15 +46,40 @@ public class PointScript : MonoBehaviour
         }
         */
         //checks if points are more or less
+
+        if(numOfPoints > 45)
+        {
+            OverForty = true;
+        }
+        else
+        {
+            OverForty = false;
+        }
         if (numOfPoints != wasPoints )
         {
             if(numOfPoints > wasPoints)
             {
                 wasPoints = numOfPoints;
+                if (OverForty)
+                {
+                    color = new Color(1, color.g + 0,01818181818f, 0);
+                }
+                if (OverForty == false)
+                {
+                    color = new Color(color.g - 0, 01818181818f, 1, 0);
+                }
+
             }
             if(numOfPoints < wasPoints)
             {
-                wasPoints = numOfPoints;
+                if (OverForty == false)
+                {
+                    color = new Color(1, color.g + 0, 01818181818f, 0);
+                }
+                if (OverForty)
+                {
+                    color = new Color(color.g - 0, 01818181818f, 0, 0);
+                }
             }
         }
 
