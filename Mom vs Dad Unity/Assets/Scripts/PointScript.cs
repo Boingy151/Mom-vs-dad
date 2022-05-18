@@ -19,6 +19,7 @@ public class PointScript : MonoBehaviour
     {
 
         Time.timeScale = 1;
+        color = new Color(1, 0.18f, 0);
 
     }
 
@@ -56,29 +57,35 @@ public class PointScript : MonoBehaviour
             OverForty = false;
         }
         if (numOfPoints != wasPoints )
-        {
-            if(numOfPoints > wasPoints)
+        {//points added
+
+            
+            if (numOfPoints > wasPoints)
             {
-                wasPoints = numOfPoints;
-                if (OverForty)
+               
+                if (OverForty ==  true)
                 {
-                    color = new Color(1, color.g + 0,01818181818f, 0);
+                    wasPoints = numOfPoints;
+                    color = new Color(color.r - 0.018f, 1, 0);
                 }
                 if (OverForty == false)
                 {
-                    color = new Color(color.g - 0, 01818181818f, 1, 0);
+                    wasPoints = numOfPoints;
+                    color = new Color(1, color.g - 0.018f, 0);
                 }
 
-            }
+            } //points lowered
             if(numOfPoints < wasPoints)
             {
                 if (OverForty == false)
                 {
-                    color = new Color(1, color.g + 0, 01818181818f, 0);
+                    wasPoints = numOfPoints;
+                    color = new Color(1, color.g - 0.018f, 0);
                 }
-                if (OverForty)
+                if (OverForty == true)
                 {
-                    color = new Color(color.g - 0, 01818181818f, 0, 0);
+                    wasPoints = numOfPoints;
+                    color = new Color(color.r + 0.018f, 1 , 0);
                 }
             }
         }
