@@ -8,6 +8,7 @@ public class GrassScript : MonoBehaviour
     Rigidbody rb;
     public float speed;
     float currentSpeed;
+    PointScript refPScript;
 
     
 
@@ -24,13 +25,15 @@ public class GrassScript : MonoBehaviour
     void Update()
     {
         currentSpeed = (1 + (GrassSpawner.time*IncreaseLevel)) * speed;
-        Debug.Log(currentSpeed);
+        //Debug.Log(currentSpeed);
         rb.velocity = new Vector3(0, 0, -1 * currentSpeed * Time.deltaTime);
 
         //removes the grass
-        if(transform.position.z < -1f)
+        if(transform.position.z < -5f)
         {
             Destroy(gameObject);
+            refPScript = GameObject.Find("PointGeatherer").GetComponent<PointScript>();
+            refPScript.numOfPoints--;
         }
         
     }
@@ -47,6 +50,7 @@ public class GrassScript : MonoBehaviour
             movRefScrpt.TouchedGrass();
             //destroys the grass after collision
             Destroy(gameObject);
+            
         }
     }
 }
