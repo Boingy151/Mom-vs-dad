@@ -44,7 +44,7 @@ public class PointScript : MonoBehaviour
         {//points added
 
             
-            if (numOfPoints > wasPoints)
+            if(numOfPoints > wasPoints)
             {
                
                 if (OverForty ==  true)
@@ -54,8 +54,9 @@ public class PointScript : MonoBehaviour
                 }
                 if (OverForty == false)
                 {
+                   
+                    color = new Color(1, color.g + 0.018f, 0);
                     wasPoints = numOfPoints;
-                    color = new Color(1, color.g - 0.018f, 0);
                 }
 
             } //points lowered
