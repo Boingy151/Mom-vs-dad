@@ -9,7 +9,7 @@ public class Movement : MonoBehaviour
     Vector3 move;
     public float speed;
     
-    PointScript refPScript;
+    public PointScript refPScript;
 
     bool goingRight;
     bool goingLeft;
@@ -52,7 +52,13 @@ public class Movement : MonoBehaviour
     public void TouchedGrass()
     {
         
-        refPScript = GameObject.Find("PointGeatherer").GetComponent<PointScript>();
+        
         refPScript.numOfPoints++;
+    }
+    public void TouchedBug()
+    {
+
+
+        refPScript.numOfPoints--;
     }
 }
