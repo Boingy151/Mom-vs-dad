@@ -14,13 +14,19 @@ public class BulletScript : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
 
         rb = GetComponent<Rigidbody>();
-        transform.LookAt(Player.transform.position);
+        Invoke("Rotate", 1);
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        rb.velocity = Vector3.forward*-1*speed*Time.deltaTime;
+        rb.velocity = transform.forward * speed * Time.deltaTime;
     }
+
+    void Rotate()
+    {
+        transform.LookAt(Player.transform);
+    }
+    
 }
