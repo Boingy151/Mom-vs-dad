@@ -9,7 +9,7 @@ public class Movement : MonoBehaviour
     Vector3 move;
     public float speed;
     
-    public PointScript refPScript;
+   
 
     bool goingRight;
     bool goingLeft;
@@ -53,12 +53,12 @@ public class Movement : MonoBehaviour
     {
         
         
-        refPScript.numOfPoints++;
+        PointScript.numOfPoints++;
     }
     public void TouchedBug()
     {
 
 
-        refPScript.numOfPoints--;
+        PointScript.numOfPoints--;
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PointScript : MonoBehaviour
 {
-    public int numOfPoints = 0;
+    public static int numOfPoints = 0;
     int wasPoints = 0;
     public Material skybox;
     public Color color;
@@ -94,6 +94,7 @@ public class PointScript : MonoBehaviour
     }
     public void ResetScene()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(0);
     }
 }

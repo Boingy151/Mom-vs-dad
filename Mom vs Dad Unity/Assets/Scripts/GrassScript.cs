@@ -32,8 +32,8 @@ public class GrassScript : MonoBehaviour
         if(transform.position.z < -5f)
         {
             Destroy(gameObject);
-            refPScript = GameObject.Find("PointGeatherer").GetComponent<PointScript>();
-            refPScript.numOfPoints--;
+            //refPScript = GameObject.Find("PointGeatherer").GetComponent<PointScript>();
+            PointScript.numOfPoints--;
         }
         
     }

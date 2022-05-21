@@ -8,6 +8,8 @@ public class BulletScript : MonoBehaviour
     GameObject Player;
     Rigidbody rb;
     public float speed;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -28,5 +30,13 @@ public class BulletScript : MonoBehaviour
     {
         transform.LookAt(Player.transform);
     }
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Player")
+        {
+            PointScript.numOfPoints--;
+            Destroy(gameObject);
+        }
+    }
+
 }
