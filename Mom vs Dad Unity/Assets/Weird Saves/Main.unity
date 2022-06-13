@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.47615933, g: 0.09841835, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.47615933, g: 0.03255598, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -778,7 +778,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31612095991f1674eb5fcc9a09a78047, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numOfPoints: 0
   skybox: {fileID: 2100000, guid: 980a0149a9c5646ad9e9ef0b2728adc0, type: 2}
   color: {r: 0.766, g: 1, b: 0, a: 1}
   Win: {fileID: 165849841}
@@ -1082,6 +1081,56 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &704244401
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 704244403}
+  - component: {fileID: 704244402}
+  m_Layer: 0
+  m_Name: GrassSpawner (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &704244402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704244401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 546b7fe1f7bf9fc4886664f2c469735b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xRange: {x: -4, y: 4}
+  zRange: {x: 50, y: 70}
+  SpawnDelayMin: 10
+  SpawnDelayMax: 20
+  Grass: {fileID: 6180618126124081174, guid: 1c54d72c1b47e4bb0a6335b3fc87c8d0, type: 3}
+  debug: 0
+--- !u!4 &704244403
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704244401}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &741655110
 GameObject:
   m_ObjectHideFlags: 0
@@ -1128,7 +1177,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xRange: {x: -4, y: 4}
   zRange: {x: 50, y: 130}
+  SpawnDelayMin: 1
+  SpawnDelayMax: 2
   Grass: {fileID: 4364169976694977581, guid: 4f1271e1d106a374bb570c5fe998bb2f, type: 3}
+  debug: 0
 --- !u!1 &899446394
 GameObject:
   m_ObjectHideFlags: 0
@@ -1343,7 +1395,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   speed: 1800
-  refPScript: {fileID: 311273949}
 --- !u!54 &939224004
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1358,7 +1409,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 120
   m_CollisionDetection: 1
 --- !u!1 &1506022175
 GameObject:
@@ -1616,6 +1667,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: vbalas
       objectReference: {fileID: 0}
+    - target: {fileID: 6180618126124081174, guid: 1c54d72c1b47e4bb0a6335b3fc87c8d0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6813427115883969196, guid: 1c54d72c1b47e4bb0a6335b3fc87c8d0, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -1659,6 +1714,14 @@ PrefabInstance:
     - target: {fileID: 6813427115883969196, guid: 1c54d72c1b47e4bb0a6335b3fc87c8d0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8781456896796779978, guid: 1c54d72c1b47e4bb0a6335b3fc87c8d0, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8781456896796779980, guid: 1c54d72c1b47e4bb0a6335b3fc87c8d0, type: 3}
+      propertyPath: speed
+      value: 600
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c54d72c1b47e4bb0a6335b3fc87c8d0, type: 3}

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 237322685}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: barrel.1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 812359946}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: barrel.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 4320625635259690630}
   - component: {fileID: 2482843290693263941}
   - component: {fileID: 331223982471649928}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 7038875567271314666}
   - component: {fileID: 8377988074718095047}
   - component: {fileID: 3656070192233217878}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 834567572998686378}
   - component: {fileID: 5665841866579498926}
   - component: {fileID: 2987554485585150716}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -322,7 +322,7 @@ GameObject:
   - component: {fileID: 1716395286921764222}
   - component: {fileID: 8125292633566884503}
   - component: {fileID: 3427720889145801354}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -405,7 +405,7 @@ GameObject:
   - component: {fileID: 7115928811689734198}
   - component: {fileID: 3286824161493453829}
   - component: {fileID: 4605492490348057844}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -488,7 +488,7 @@ GameObject:
   - component: {fileID: 4005863786159597223}
   - component: {fileID: 3221172867496295020}
   - component: {fileID: 3301589859031512121}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -571,7 +571,7 @@ GameObject:
   - component: {fileID: 1909720753437519016}
   - component: {fileID: 2485360654512031229}
   - component: {fileID: 8244871907352395009}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -654,7 +654,7 @@ GameObject:
   - component: {fileID: 7710023263094186441}
   - component: {fileID: 1369886890117257047}
   - component: {fileID: 7351243714175110024}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -738,7 +738,7 @@ GameObject:
   - component: {fileID: 8781456896796779979}
   - component: {fileID: 8781456896796779978}
   - component: {fileID: 8781456896796779980}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Labybug
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -752,8 +752,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6180618126124081174}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -770,7 +770,7 @@ Transform:
   - {fileID: 237322685}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!54 &8781456896796779979
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -782,7 +782,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -812,7 +812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbfa8d7eeaf547dca0802e92a8e862b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 200
+  speed: 600
   barrel:
   - {fileID: 812359946}
   - {fileID: 237322685}
@@ -830,7 +830,7 @@ GameObject:
   - component: {fileID: 5362796092835926239}
   - component: {fileID: 5003901873671846648}
   - component: {fileID: 6340826681849053541}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}

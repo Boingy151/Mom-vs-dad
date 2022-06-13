@@ -46,30 +46,16 @@ public class KillerBug : MonoBehaviour
         }
 
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        //detects grass touching the player
-        if (other.gameObject.tag == "Player")
-        {
-            //grabs the player gameobject
-            GameObject playerB = other.gameObject;
-            //gets the component from the player
-            Movement movRefScrpt = playerB.GetComponent<Movement>();
-            movRefScrpt.TouchedBug();
-            //destroys the grass after collision
-            Destroy(gameObject);
-
-        }
-    }
+    
 
     public IEnumerator Shoot()
     {
+        if(gameObject.transform.position.z > 5)
         Instantiate(Bullet, barrel[0].position, barrel[0].rotation);
         Instantiate(Bullet, barrel[1].position, barrel[1].rotation);
-        Debug.Log("Done");
         yield return new WaitForSeconds(ShootDelay);
         canShoot = true;
-
+        
        
     }
 }

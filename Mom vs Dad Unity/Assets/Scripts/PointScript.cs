@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class PointScript : MonoBehaviour
 {
+
+
     public static int numOfPoints = 0;
     int wasPoints = 0;
     public Material skybox;
@@ -14,6 +16,9 @@ public class PointScript : MonoBehaviour
     public GameObject Lose;
     public GameObject reset;
     bool OverForty = false;
+
+
+
     
     void Start()
     {
@@ -94,6 +99,7 @@ public class PointScript : MonoBehaviour
     }
     public void ResetScene()
     {
+        numOfPoints = 0;
         Time.timeScale = 1;
         SceneManager.LoadScene(0);
     }

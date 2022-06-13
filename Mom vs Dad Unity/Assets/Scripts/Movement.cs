@@ -55,10 +55,5 @@ public class Movement : MonoBehaviour
         
         PointScript.numOfPoints++;
     }
-    public void TouchedBug()
-    {
-
-
-        PointScript.numOfPoints--;
-    }
+   
 }

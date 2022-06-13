@@ -9,8 +9,11 @@ public class GrassSpawner : MonoBehaviour
     float zCord;
     public Vector2 xRange;
     public Vector2 zRange;
+    public float SpawnDelayMin;
+    public float SpawnDelayMax;
     float SpawnDelay;
     public GameObject Grass;
+    public bool debug = false;
 
     public static float time;
     
@@ -19,7 +22,7 @@ public class GrassSpawner : MonoBehaviour
     {
         
         SpawnDelay = 1;
-        InvokeRepeating("SpawnGrass", SpawnDelay, SpawnDelay);
+        Invoke("SpawnGrass", SpawnDelay);
         
     }
 
@@ -34,10 +37,20 @@ public class GrassSpawner : MonoBehaviour
     {
         xCord = Random.Range(xRange.x, xRange.y);
         zCord = Random.Range(zRange.x, zRange.y);
-        SpawnDelay = Random.Range(0.5f, 2f);
+        SpawnDelay = Random.Range(SpawnDelayMin, SpawnDelayMax);
+        if (debug)
+        {
+            Debug.Log(SpawnDelay);
+        }
         
       
 
-        Instantiate(Grass, new Vector3(xCord, 0.3f, zCord), new Quaternion(0, 0, 0, 0));
+        Instantiate(Grass, new Vector3(xCord, 0.3f, zCord), new Quaternion(0, 180, 0, 0));
+        spawn();
     }
+    void spawn()
+    {
+        Invoke("SpawnGrass", SpawnDelay);
+    }
+
 }

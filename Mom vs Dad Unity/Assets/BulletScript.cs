@@ -16,7 +16,7 @@ public class BulletScript : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
 
         rb = GetComponent<Rigidbody>();
-        Invoke("Rotate", 1);
+        Rotate();
     }
 
     // Update is called once per frame

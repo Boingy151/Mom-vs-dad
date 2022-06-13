@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 264255826378192370}
   - component: {fileID: 8815658653656023916}
   - component: {fileID: 1103820877635018675}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 3481789013560780978}
   - component: {fileID: 3481789013560780973}
   - component: {fileID: 3481789013560780976}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GRASS-AND-NOTHING-ESLE (1)
   m_TagString: Grass
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 5159706260217962394}
   - component: {fileID: 6615109144548472857}
   - component: {fileID: 7493215887613668358}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 9116568104250575173}
   - component: {fileID: 1844088332690745004}
   - component: {fileID: 5099455713937977009}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -341,7 +341,7 @@ GameObject:
   - component: {fileID: 646915259038257361}
   - component: {fileID: 2094672778407228156}
   - component: {fileID: 6623012128567012205}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
